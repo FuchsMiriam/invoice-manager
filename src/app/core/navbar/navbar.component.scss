@@ -1,0 +1,32 @@
+$primary-color: #6a1b9a;
+$secondary-color: #000000;
+
+.navbar {
+  background: linear-gradient(to right, $secondary-color, $primary-color);
+  color: white;
+  padding: 1rem;
+
+  .navbar-brand {
+    font-size: 1.5rem;
+    font-weight: bold;
+  }
+
+  .navbar-menu {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+  }
+
+  .navbar-item {
+    color: white;
+    text-decoration: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+    width: 100px;
+
+    &:hover {
+      font-size: 1.2rem;
+    }
+  }
+}

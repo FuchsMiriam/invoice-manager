@@ -1,6 +1,7 @@
 $primary-color: purple;
 $secondary-color: #000000;
-$accent-color: #a020f0;
+$accent-color: rgba(128, 0, 128, 0.616);
+$link-color: rgb(186, 85, 211);
 
 .login-container {
   display: flex;
@@ -82,7 +83,7 @@ $accent-color: #a020f0;
     font-size: 0.9rem;
 
     a {
-      color: $accent-color;
+      color: $link-color;
       text-decoration: none;
       font-weight: bold;
 

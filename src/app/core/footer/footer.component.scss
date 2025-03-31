@@ -1,15 +1,16 @@
-$primary-color: #6a1b9a;
+$primary-color: purple;
 $secondary-color: #000000;
 
 .footer {
-  background: linear-gradient(to right, $secondary-color, $primary-color);
+  background: $secondary-color;
   color: white;
   padding: 2rem 0;
   text-align: center;
 
   .footer-content {
-    max-width: 1200px;
-    margin: 0 auto;
+    max-width: 100%;
+    margin: 0;
+    padding: 1rem 0;
 
     p {
       margin: 0;
@@ -18,6 +19,9 @@ $secondary-color: #000000;
 
     .footer-links {
       margin-top: 1rem;
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
       a {
         color: white;
         text-decoration: none;
@@ -27,6 +31,7 @@ $secondary-color: #000000;
         width: 100px;
 
         &:hover {
+          color: $primary-color;
           font-size: 1.2rem;
         }
       }

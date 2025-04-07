@@ -1,0 +1,35 @@
+$primary-color: purple;
+$secondary-color: #000000;
+$accent-color: #a020f0;
+
+.customer-dashboard {
+    padding: 2rem;
+    text-align: center;
+    color: white;
+  
+    h2 {
+      font-size: 2.5rem;
+      margin-bottom: 2rem;
+    }
+  
+    .dashboard-links {
+      display: flex;
+      justify-content: space-around;
+      margin-top: 1rem;
+  
+      .dashboard-item {
+        padding: 1rem 2rem;
+        background: $primary-color;
+        color: white;
+        border-radius: 5px;
+        text-decoration: none;
+        font-size: 1.2rem;
+        font-weight: bold;
+  
+        &:hover {
+          background: $accent-color;
+        }
+      }
+    }
+  }
+  

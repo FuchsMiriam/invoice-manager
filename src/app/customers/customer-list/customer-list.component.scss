@@ -1,0 +1,42 @@
+.customer-list {
+    padding: 2rem;
+    color: white;
+  
+    h2 {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+  
+    .add-btn {
+      background: purple;
+      color: white;
+      border: none;
+      padding: 0.6rem 1.2rem;
+      border-radius: 5px;
+      margin-bottom: 1rem;
+      cursor: pointer;
+      font-weight: bold;
+  
+      &:hover {
+        background: #a020f0;
+      }
+    }
+  
+    ul {
+      list-style: none;
+      padding: 0;
+  
+      li {
+        padding: 0.8rem;
+        background: #222;
+        margin-bottom: 0.5rem;
+        border-radius: 5px;
+        cursor: pointer;
+  
+        &:hover {
+          background: #333;
+        }
+      }
+    }
+  }
+  

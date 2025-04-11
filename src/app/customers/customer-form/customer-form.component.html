@@ -1,3 +1,4 @@
+<section class="customer-form-container">
 <div class="customer-form">
     <h2>Add New Customer</h2>
     <form (ngSubmit)="onSubmit()" #customerForm="ngForm">
@@ -44,4 +45,5 @@
       <button type="submit" [disabled]="!customerForm.form.valid">Save Customer</button>
     </form>
   </div>
+</section>
   

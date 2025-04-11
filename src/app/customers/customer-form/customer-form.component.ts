@@ -4,6 +4,7 @@ import { FormsModule } from '@angular/forms';
 
 @Component({
   selector: 'app-customer-form',
+  standalone: true,
   imports: [FormsModule],
   templateUrl: './customer-form.component.html',
   styleUrl: './customer-form.component.scss'
@@ -15,14 +16,14 @@ export class CustomerFormComponent {
     address: '',
     phone: '',
     taxId: '',
-    paymentTerms: '30',  // Standardmäßig 30 Tage
+    paymentTerms: '30',
     discount: 0,
   };
 
   constructor(private customerService: CustomerService) {}
 
   onSubmit() {
-    //this.customerService.addCustomer(this.customer); //Daten an Firebase senden
+    this.customerService.addCustomer(this.customer);
     this.customer = {
       name: '',
       email: '',

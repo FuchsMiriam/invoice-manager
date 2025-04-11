@@ -1,1 +1,32 @@
-<p>customer-detail works!</p>
+<section class="customer-detail-container">
+<div *ngIf="customer$ | async as customer">
+    <h3>Details for: {{ customer.name }}</h3>
+    <table border="1" cellpadding="8" cellspacing="0">
+      <tr>
+        <th>Email</th>
+        <td>{{ customer.email }}</td>
+      </tr>
+      <tr>
+        <th>Address</th>
+        <td>{{ customer.address }}</td>
+      </tr>
+      <tr>
+        <th>Phone</th>
+        <td>{{ customer.phone }}</td>
+      </tr>
+      <tr>
+        <th>Tax ID</th>
+        <td>{{ customer.taxId }}</td>
+      </tr>
+      <tr>
+        <th>Payment Terms</th>
+        <td>{{ customer.paymentTerms }} days</td>
+      </tr>
+      <tr>
+        <th>Discount</th>
+        <td>{{ customer.discount }}</td>
+      </tr>
+    </table>
+  </div>
+</section>
+  

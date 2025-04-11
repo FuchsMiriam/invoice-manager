@@ -1,40 +1,52 @@
-import { Injectable } from '@angular/core';
-import { AngularFirestore } from '@angular/fire/firestore';
+import { inject, Injectable } from '@angular/core';
+import { Firestore, collection, collectionData, doc, docData, setDoc, updateDoc, deleteDoc } from '@angular/fire/firestore';
 import { Observable } from 'rxjs';
-import { provideFirebaseApp, initializeApp } from '@angular/fire/app';
-import { provideFirestore, getFirestore } from '@angular/fire/firestore';
-import { environment } from 'src/environments/environment';
+
+export interface Customer {
+  id?: string;
+  name: string;
+  email: string;
+  address: string;
+  phone: number;
+  taxId: number,
+  paymentTerms: string;
+  discount: string;
+}
 
 @Injectable({
   providedIn: 'root'
 })
 export class CustomerService {
 
-  constructor(private firestore: AngularFirestore
-  ) { }
+  private firestore = inject(Firestore);
 
-  // Get customer from Firebase
+  //Get customer list
   getCustomers(): Observable<any[]> {
-    return this.firestore.collection('customers').valueChanges();
+    const customersRef = collection(this.firestore, 'customers');
+    return collectionData(customersRef, { idField: 'id' });
   }
 
-  // Add customer
-  addCustomer(customer: any): Promise<any> {
-    return this.firestore.collection('customers').add(customer);
-  }
-
-  // Update customer
-  updateCustomer(id: string, customer: any): Promise<void> {
-    return this.firestore.collection('customers').doc(id).update(customer);
-  }
-
-  // Delete customer
-  deleteCustomer(id: string): Promise<void> {
-    return this.firestore.collection('customers').doc(id).delete();
-  }
-
-  // Get details of a specific customer
+  //Get specific customer
   getCustomer(id: string): Observable<any> {
-    return this.firestore.collection('customers').doc(id).valueChanges();
+    const docRef = doc(this.firestore, `customers/${id}`);
+    return docData(docRef, { idField: 'id' });
+  }
+
+  //Add customer
+  addCustomer(customer: any): Promise<void> {
+    const docRef = doc(collection(this.firestore, 'customers'));
+    return setDoc(docRef, customer);
+  }
+
+  //Update customer
+  updateCustomer(id: string, customer: any): Promise<void> {
+    const docRef = doc(this.firestore, `customers/${id}`);
+    return updateDoc(docRef, customer);
+  }
+
+  //Delete customer
+  deleteCustomer(id: string): Promise<void> {
+    const docRef = doc(this.firestore, `customers/${id}`);
+    return deleteDoc(docRef);
   }
 }

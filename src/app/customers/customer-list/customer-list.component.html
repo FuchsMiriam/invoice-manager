@@ -3,7 +3,7 @@
     <button routerLink="/customers/new" class="add-btn">+ Add Customer</button>
   
     <ul>
-      <li *ngFor="let customer of customers" [routerLink]="['/customers', customer.id]">
+      <li *ngFor="let customer of customers$ | async" [routerLink]="['/customers', customer.id]">
         {{ customer.name }} – {{ customer.email }}
       </li>
     </ul>

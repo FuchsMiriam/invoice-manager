@@ -1,6 +1,7 @@
 .customer-list {
     padding: 2rem;
     color: white;
+    background-color: black;
   
     h2 {
       font-size: 2rem;
@@ -28,13 +29,15 @@
   
       li {
         padding: 0.8rem;
-        background: #222;
+        background: white;
         margin-bottom: 0.5rem;
         border-radius: 5px;
         cursor: pointer;
+        color: black;
   
         &:hover {
           background: #333;
+          color: white;
         }
       }
     }

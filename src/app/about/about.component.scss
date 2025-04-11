@@ -1,0 +1,32 @@
+$primary-color: purple;
+$accent-color: #a020f0;
+
+.about-container {
+  padding: 2rem;
+  line-height: 1.6;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  min-height: 100vh;
+  color: white;
+  background-color: black;
+  > .about-text {
+    max-width: 800px;
+  }
+}
+
+.highlight {
+  color: $primary-color;
+  transition: color 0.3s ease;
+}
+
+.highlight:hover {
+  color: $accent-color;
+  cursor: pointer;
+}
+
+h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}

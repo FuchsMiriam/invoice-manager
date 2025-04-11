@@ -1,1 +1,47 @@
-<p>customer-form works!</p>
+<div class="customer-form">
+    <h2>Add New Customer</h2>
+    <form (ngSubmit)="onSubmit()" #customerForm="ngForm">
+      <div class="form-group">
+        <label for="name">Customer Name</label>
+        <input type="text" id="name" name="name" [(ngModel)]="customer.name" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="email">Email Address</label>
+        <input type="email" id="email" name="email" [(ngModel)]="customer.email" required />
+      </div>
+  
+      <div class="form-group">
+        <label for="address">Address</label>
+        <input type="text" id="address" name="address" [(ngModel)]="customer.address" />
+      </div>
+  
+      <div class="form-group">
+        <label for="phone">Phone Number</label>
+        <input type="tel" id="phone" name="phone" [(ngModel)]="customer.phone" />
+      </div>
+  
+      <div class="form-group">
+        <label for="taxId">Tax ID (USt-IdNr.)</label>
+        <input type="text" id="taxId" name="taxId" [(ngModel)]="customer.taxId" />
+      </div>
+  
+      <div class="form-group">
+        <label for="paymentTerms">Payment Terms</label>
+        <select id="paymentTerms" name="paymentTerms" [(ngModel)]="customer.paymentTerms">
+          <option value="30">30 Days</option>
+          <option value="60">60 Days</option>
+          <option value="90">90 Days</option>
+          <option value="immediate">Immediate</option>
+        </select>
+      </div>
+  
+      <div class="form-group">
+        <label for="discount">Discount (%)</label>
+        <input type="number" id="discount" name="discount" [(ngModel)]="customer.discount" />
+      </div>
+  
+      <button type="submit" [disabled]="!customerForm.form.valid">Save Customer</button>
+    </form>
+  </div>
+  

@@ -6,6 +6,8 @@ $accent-color: #a020f0;
     padding: 2rem;
     text-align: center;
     color: white;
+    height: 100vh;
+    background-color: $secondary-color;
   
     h2 {
       font-size: 2.5rem;
@@ -15,7 +17,7 @@ $accent-color: #a020f0;
     .dashboard-links {
       display: flex;
       justify-content: space-around;
-      margin-top: 1rem;
+      margin-top: 100px;
   
       .dashboard-item {
         padding: 1rem 2rem;

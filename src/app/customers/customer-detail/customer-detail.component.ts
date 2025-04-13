@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, RouterModule } from '@angular/router';
 import { CustomerService } from '../../services/customer.service';
 import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-customer-detail',
   standalone: true,
-  imports: [CommonModule],
+  imports: [CommonModule, RouterModule],
   templateUrl: './customer-detail.component.html',
   styleUrl: './customer-detail.component.scss',
 })

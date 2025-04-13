@@ -1,11 +1,12 @@
 <div class="customer-list">
     <h2>Customers</h2>
-    <button routerLink="/customers/new" class="add-btn">+ Add Customer</button>
+    <button routerLink="/customers/new" class="add-btn">+ Add customer</button>
   
     <ul>
       <li *ngFor="let customer of customers$ | async" [routerLink]="['/customers', customer.id]">
         {{ customer.name }} – {{ customer.email }}
       </li>
     </ul>
+    <button routerLink="/customers" class="back-btn">Back</button>
   </div>
   

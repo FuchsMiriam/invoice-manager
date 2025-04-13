@@ -2,15 +2,16 @@
     background: linear-gradient(to right, #000000, purple);
     padding: 2rem;
     color: white;
+    height: 100vh;
 }
 
 .customer-detail {
-  max-width: 800px; /* Breite für das Detailformular */
+  max-width: 800px;
   margin: 0 auto;
   padding: 2rem;
-  background-color: #222; /* Dunkler Hintergrund */
+  background-color: #222;
   color: #fff;
-  border-radius: 8px; /* Abgerundete Ecken */
+  border-radius: 5px;
 }
 
 .customer-detail h3 {
@@ -53,15 +54,16 @@ tr:hover {
 
 button {
   margin-top: 1.5rem;
-  padding: 1rem;
-  background-color: #6a1b9a;
-  color: white;
+  font-weight: bold;
   font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: purple;
+  color: white;
   border: none;
   border-radius: 4px;
   cursor: pointer;
-  width: 100%;
-  transition: background-color 0.3s ease;
+  width: 100px;
+  transition: background-color 0.2s ease;
 }
 
 button:disabled {
@@ -69,5 +71,5 @@ button:disabled {
 }
 
 button:hover {
-  background-color: #a020f0; /* Hover-Effekt für den Button */
+  background-color: #a020f0;
 }

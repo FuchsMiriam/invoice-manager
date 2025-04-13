@@ -3,35 +3,42 @@ $secondary-color: #000000;
 $accent-color: #a020f0;
 
 .customer-dashboard {
-    padding: 2rem;
-    text-align: center;
-    color: white;
-    height: 100vh;
-    background: linear-gradient(to right, #000000, purple);
-  
+  padding: 2rem;
+  text-align: center;
+  color: white;
+  height: 100vh;
+  background: linear-gradient(to right, #000000, purple);
+   .customer-dashboard-header {
+    display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
     h2 {
       font-size: 2.5rem;
-      margin-bottom: 2rem;
+      margin-bottom: 10px;
     }
-  
-    .dashboard-links {
-      display: flex;
-      justify-content: space-around;
-      margin-top: 100px;
-  
-      .dashboard-item {
-        padding: 1rem 2rem;
-        background: $primary-color;
-        color: white;
-        border-radius: 5px;
-        text-decoration: none;
-        font-size: 1.2rem;
-        font-weight: bold;
-  
-        &:hover {
-          background: $accent-color;
-        }
+    p{
+      font-size: 1.2rem;
+    }
+  }
+
+  .dashboard-links {
+    display: flex;
+    justify-content: space-evenly;
+    margin-top: 100px;
+
+    .dashboard-item {
+      padding: 1rem 2rem;
+      background: $primary-color;
+      color: white;
+      border-radius: 5px;
+      text-decoration: none;
+      font-size: 1.2rem;
+      font-weight: bold;
+
+      &:hover {
+        background: $accent-color;
       }
     }
   }
-  
+}

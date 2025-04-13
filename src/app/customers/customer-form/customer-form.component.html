@@ -42,7 +42,10 @@
         <input type="number" id="discount" name="discount" [(ngModel)]="customer.discount" />
       </div>
   
-      <button type="submit" [disabled]="!customerForm.form.valid">Save Customer</button>
+      <div class="btn-container">
+      <button type="submit" [disabled]="!customerForm.form.valid">Save customer</button>
+      <button routerLink="/customers">Back</button>
+    </div>
     </form>
   </div>
 </section>

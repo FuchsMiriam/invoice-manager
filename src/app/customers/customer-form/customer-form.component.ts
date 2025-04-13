@@ -1,11 +1,12 @@
 import { Component } from '@angular/core';
 import { CustomerService } from '../../services/customer.service';
 import { FormsModule } from '@angular/forms'; 
+import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-customer-form',
   standalone: true,
-  imports: [FormsModule],
+  imports: [FormsModule, RouterModule],
   templateUrl: './customer-form.component.html',
   styleUrl: './customer-form.component.scss'
 })

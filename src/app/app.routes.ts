@@ -7,6 +7,8 @@ import { CustomerFormComponent } from './customers/customer-form/customer-form.c
 import { CustomerDetailComponent } from './customers/customer-detail/customer-detail.component';
 import { CustomerDashboardComponent } from './customers/customer-dashboard/customer-dashboard.component';
 import { AboutComponent } from './about/about.component';
+import { ImprintComponent } from './legal/imprint/imprint.component';
+import { PrivacyPolicyComponent } from './legal/privacy-policy/privacy-policy.component';
 
 export const routes: Routes = [
   { path: '', component: HomeComponent },
@@ -17,5 +19,7 @@ export const routes: Routes = [
   { path: 'customerlist', component: CustomerListComponent },
   { path: 'customers/new', component: CustomerFormComponent },
   { path: 'customers/:id', component: CustomerDetailComponent },
+  {path: 'legal/imprint', component: ImprintComponent},
+  {path: 'legal/privacy-policy', component: PrivacyPolicyComponent},
   { path: '**', redirectTo: '' },
 ];

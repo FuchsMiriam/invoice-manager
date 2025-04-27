@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { CustomerService } from '../../services/customer.service';
-import { FormsModule } from '@angular/forms'; 
+import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 
 @Component({
@@ -8,7 +8,7 @@ import { RouterModule } from '@angular/router';
   standalone: true,
   imports: [FormsModule, RouterModule],
   templateUrl: './customer-form.component.html',
-  styleUrl: './customer-form.component.scss'
+  styleUrl: './customer-form.component.scss',
 })
 export class CustomerFormComponent {
   customer = {
@@ -24,6 +24,9 @@ export class CustomerFormComponent {
   constructor(private customerService: CustomerService) {}
 
   onSubmit() {
+    const thankYou = document.getElementById('hidden');
+    const customerForm = document.getElementById('customer-form');
+
     this.customerService.addCustomer(this.customer);
     this.customer = {
       name: '',
@@ -34,5 +37,14 @@ export class CustomerFormComponent {
       paymentTerms: '30',
       discount: 0,
     };
+    if (thankYou && customerForm) {
+      customerForm.style.display = 'none';
+      thankYou.style.display = 'block';
+
+      setTimeout(() => {
+        thankYou.style.display = 'none';
+        customerForm.style.display = 'block';
+      }, 3000);
+    }
   }
 }

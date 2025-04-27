@@ -1,0 +1,32 @@
+.privacy-policy-section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: linear-gradient(to right, black, purple);
+    color: white;
+    text-align: center;
+    flex-direction: column;
+    height: 100%;
+  }
+
+  .privacy-policy-content {
+    max-width: 900px;
+    width: 100%;
+    text-align: left;
+    overflow-y: auto;
+  }
+  
+  .privacy-policy-content h1,
+  .privacy-policy-content h2,
+  .privacy-policy-content h3 {
+    margin-top: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .privacy-policy-content p, a {
+    margin-bottom: 1rem;
+    line-height: 1.6;
+    text-decoration: none;
+    color: white;
+  }
+  
